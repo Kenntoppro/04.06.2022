@@ -1,0 +1,78 @@
+Задача №1
+from random import randint
+secret = randint(1,100)
+user = 0
+try_count = 1
+while secret != user:
+    print('%d:' % try_count, end=' ')
+    user = int(input('Введите число: '))
+    if user < secret:
+        print('Маловато')
+    elif user > secret:
+        print('Многовато')
+    else:
+        print('Поздравляю, вы попали в точку!')
+    try_count += 1
+
+Задача №2
+num = int(input('Введите число: '))
+base = int(input("Ведите в какую систему переводим (2-9): "))
+if not(2 <= base <= 9):
+    quit()
+new = ''
+while num > 0:
+    new = str(num % base) + new
+    num //= base
+print(new)
+
+Задача №3
+import math
+n = int(input('Введите число: '))
+f = math.factorial(n)
+print(f)
+
+Задача %4
+
+
+Задача №5
+n = int(input('Введите число: '))
+even = 0
+odd = 0
+while n>0:
+    if n % 2 == 0:
+        even+=1
+    else:
+        odd+=1
+    n //= 10
+tir = f'Четных: {even} Нечетных: {odd}'
+print(tir)
+
+Задача №6
+from statistics import mean
+inp_lst = [12, 32, 46, 102, 66, -1, 54]
+list_avg = mean(inp_lst)
+print(list_avg)
+
+Задача №7
+import datetime
+today = datetime.date.today()
+tuture = datetime.date(2022,12,31)
+print(tuture - today)
+
+Задача №8
+from datetime import date, timedelta
+dt = date.today() + timedelta(1835)
+print(date.today())
+print(dt)
+
+
+Задача №9
+import datetime
+past = datetime.date(2022,5,20)
+tuture = datetime.date(2022,6,8)
+print(tuture - past)
+
+Задача №10
+import datetime
+today = datetime.datetime.now()
+print(today.ctime())
